@@ -23,36 +23,7 @@ module.exports = {
     "author": {
       "type": "string",
       "message": "Author"
-    },
-    "build": {
-      "type": "list",
-      "message": "Vue build",
-      "choices": [
-        {
-          "name": "Runtime + Compiler: recommended for most users",
-          "value": "standalone",
-          "short": "standalone"
-        },
-        {
-          "name": "Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific HTML) are ONLY allowed in .vue files - render functions are required elsewhere",
-          "value": "runtime",
-          "short": "runtime"
-        }
-      ]
-    },
-    "router": {
-      "type": "confirm",
-      "message": "Install vue-router?"
     }
   },
-  "filters": {
-    ".eslintrc.js": "lint",
-    ".eslintignore": "lint",
-    "config/test.env.js": "unit || e2e",
-    "test/unit/**/*": "unit",
-    "build/webpack.test.conf.js": "unit",
-    "test/e2e/**/*": "e2e",
-    "src/router/**/*": "router"
-  },
-  "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
+  "completeMessage": "Welcome to Develup Vue Template"
 };
