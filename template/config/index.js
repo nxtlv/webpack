@@ -27,7 +27,21 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+ /*     "/api": {
+        target: "http://str-i.develup.pro",
+        changeOrigin: true,
+        cookieDomainRewrite: "",
+        secure: false,
+        headers: {
+          "Cache-Control": "public, no-cache",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+          "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
+          "Access-Control-Allow-Credentials": "true"
+        }
+      }*/
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
