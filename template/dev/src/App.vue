@@ -32,7 +32,8 @@ export default {
     Logo,
     'menu-app':Menu,
     Resize{{#unless router}},
-    Hello{{/unless}}
+    Hello
+{{/unless}}
 };
 </script>
 
