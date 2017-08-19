@@ -20,22 +20,6 @@ module.exports = {
       "message": "Project description",
       "default": "A Vue.js project"
     },
-    "build": {
-      "type": "list",
-      "message": "Vue build",
-      "choices": [
-        {
-          "name": "Runtime + Compiler: recommended for most users",
-          "value": "standalone",
-          "short": "standalone"
-        },
-        {
-          "name": "Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific HTML) are ONLY allowed in .vue files - render functions are required elsewhere",
-          "value": "runtime",
-          "short": "runtime"
-        }
-      ]
-    },
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
@@ -43,10 +27,6 @@ module.exports = {
     "vuex": {
       "type": "confirm",
       "message": "Install vuex?"
-    },
-    "lint": {
-      "type": "confirm",
-      "message": "Use ESLint to lint your code?"
     },
     "proxy": {
       "type": "confirm",

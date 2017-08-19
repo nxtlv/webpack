@@ -6,20 +6,23 @@ import App from './App';
 import router from './router';
 {{/router}}
 {{#vuex}}
-import vuex from './store';
+import {{store}} from './store';
 {{/vuex}}
 
+import "./assets/scss/app.scss";
 Vue.config.productionTip = false;
 
 new Vue({
   el: '#app',
   {{#vuex}}
-  vuex,
+  store,
   {{/vuex}}
   {{#router}}
   router,
   {{/router}}
-  render: h => h(App)
   template: '<App/>',
+  created () {
+    window.vue = this;
+  },
   components: { App }
 });

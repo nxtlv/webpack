@@ -15,6 +15,8 @@
         {{/router}}
       </div>
     </Resize>
+</template>
+
 <script>
 {{#unless router}}
 import Hello from './components/Hello';
@@ -27,9 +29,9 @@ import Logo from './assets/svg/develup_logo.svg';
 export default {
   name: 'app',
   components: {
-      Logo,
-      'menu-app':Menu,
-      Resize{{#router}},
+    Logo,
+    'menu-app':Menu,
+    Resize{{#unless router}},
     Hello{{/router}}
 };
 </script>
