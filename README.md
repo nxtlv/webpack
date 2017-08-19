@@ -2,7 +2,7 @@
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
-> This template is Vue 2.0 compatible. `vue init chadovich/webpack my-project`
+> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
 
 ## Documentation
 
@@ -38,3 +38,22 @@ If port 8080 is already in use on your machine you must change the port number i
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
   - Use `npm run build --report`to build with bundle size analytics.
+
+- `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
+  - Supports ES2015+ in test files.
+  - Supports all webpack loaders.
+  - Easy mock injection.
+
+- `npm run e2e`: End-to-end tests with [Nightwatch](http://nightwatchjs.org/).
+  - Run tests in multiple browsers in parallel.
+  - Works with one command out of the box:
+    - Selenium and chromedriver dependencies automatically handled.
+    - Automatically spawns the Selenium server.
+
+### Fork It And Make Your Own
+
+You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
+
+``` bash
+vue init username/repo my-project
+```

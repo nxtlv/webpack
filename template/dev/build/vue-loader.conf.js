@@ -1,5 +1,5 @@
 var utils = require('./utils')
-var config = require('../config')
+var config = require('../config/index')
 var isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
@@ -8,5 +8,11 @@ module.exports = {
       ? config.build.productionSourceMap
       : config.dev.cssSourceMap,
     extract: isProduction
-  })
+  }),
+  transformToRequire: {
+    video: 'src',
+    source: 'src',
+    img: 'src',
+    image: 'xlink:href'
+  }
 }

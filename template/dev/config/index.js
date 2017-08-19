@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    index: path.resolve(__dirname, '../../index.html'),
+    assetsRoot: path.resolve(__dirname, '../../'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,
@@ -28,19 +28,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
- /*     "/api": {
-        target: "http://str-i.develup.pro",
-        changeOrigin: true,
-        cookieDomainRewrite: "",
-        secure: false,
-        headers: {
-          "Cache-Control": "public, no-cache",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-          "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
-          "Access-Control-Allow-Credentials": "true"
-        }
-      }*/
+{{#proxy}}
+     "/api": {
+       target: {{remoteServer}},
+       changeOrigin: true,
+       cookieDomainRewrite: "",
+     }
+{{/proxy}}
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
