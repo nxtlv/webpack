@@ -34,6 +34,7 @@ export default {
     Resize{{#unless router}},
     Hello
 {{/unless}}
+  }
 };
 </script>
 

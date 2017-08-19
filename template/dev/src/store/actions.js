@@ -1,7 +1,7 @@
 import Vue from 'vue'
 const URL_ROOT = '/api';
 
-export const GET_SOCIAL_URL = ({commit, state}) {
+export const GET_SOCIAL_URL = ({commit, state}) => {
   return new Promise((resolve, reject) => {
     Vue.http.get(URL_ROOT + '/auth/social-url').then(
       (response) => {
@@ -14,7 +14,7 @@ export const GET_SOCIAL_URL = ({commit, state}) {
   })
 }
 
-export const LOGOUT = ({commit, state}) {
+export const LOGOUT = ({commit, state}) => {
   return new Promise((resolve, reject) => {
     Vue.http.get(URL_ROOT + '/auth/logout').then(
       () => {
@@ -26,7 +26,7 @@ export const LOGOUT = ({commit, state}) {
   })
 }
 
-export const SOCIAL_LOGIN = ({commit, state}, sn) {
+export const SOCIAL_LOGIN = ({commit, state}, sn) => {
   let url = state.url[sn];
 
   let screenX = (typeof window.screenX !== 'undefined') ? window.screenX : window.screenLeft;
@@ -62,7 +62,7 @@ export const SOCIAL_LOGIN = ({commit, state}, sn) {
   });
 }
 
-export const GET_USER = ({commit, state}) {
+export const GET_USER = ({commit, state}) => {
   return new Promise((resolve, reject) => {
     Vue.http.get(URL_ROOT + '/user').then(
       (response) => {
