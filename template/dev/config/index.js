@@ -30,7 +30,7 @@ module.exports = {
     proxyTable: {
 {{#proxy}}
      "/api": {
-       target: {{remoteServer}},
+       target: "{{remoteServer}}",
        changeOrigin: true,
        cookieDomainRewrite: "",
      }

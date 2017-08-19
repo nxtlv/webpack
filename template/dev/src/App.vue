@@ -17,22 +17,21 @@
     </Resize>
 <script>
 {{#unless router}}
-import Hello from './components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Hello from './components/Hello';
 {{/unless}}
 
-import Resize from '@/components/common/Resize'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Menu from '@/components/common/Menu'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Logo from './assets/svg/develup_logo.svg'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import Resize from '@/components/common/Resize';
+import Menu from '@/components/common/Menu';
+import Logo from './assets/svg/develup_logo.svg';
 
 export default {
-  name: 'app'{{#router}}{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{else}},
+  name: 'app',
   components: {
       Logo,
       'menu-app':Menu,
-      Resize
-    Hello{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}{{/router}}
-}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+      Resize{{#router}},
+    Hello{{/router}}
+};
 </script>
 
 <style>
