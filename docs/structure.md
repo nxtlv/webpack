@@ -27,7 +27,6 @@
 │   │   └── nightwatch.conf.js  # test runner config file
 ├── .babelrc                    # babel config
 ├── .postcssrc.js               # postcss config
-├── .eslintrc.js                # eslint config
 ├── .editorconfig               # editor config
 ├── index.html                  # index.html template
 └── package.json                # build scripts and dependencies
