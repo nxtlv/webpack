@@ -1,9 +1,6 @@
 <template>
     <Resize id="app" class="app-layout">
-      <div class="preview-text">
-        <Logo class="logo"></Logo>
-        <h3></h3>
-      </div>
+      <img src="/static/img/ya_logo.svg" alt="" class="logo">
 
       <menu-app></menu-app>
 
@@ -39,12 +36,18 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  .logo{
+    width: 400px;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
 </style>
+
