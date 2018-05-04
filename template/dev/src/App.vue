@@ -24,7 +24,7 @@ import Hello from './components/Hello';
 
 import Resize from '@/components/common/Resize';
 import Menu from '@/components/common/Menu';
-import Logo from './assets/svg/develup_logo.svg';
+import Logo from './assets/svg/ya_logo.svg';
 
 export default {
   name: 'app',

@@ -1,9 +1,7 @@
 <template>
-    <transition name="custom">
-        <div class="page-index">
-            Test page index
-        </div>
-    </transition>
+    <div class="page-index">
+        Test page index
+    </div>
 </template>
 
 <script>
