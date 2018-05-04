@@ -5,19 +5,13 @@
       <menu-app></menu-app>
 
       <div class="center">
-        {{#router}}
         <router-view></router-view>
-        {{else}}
-        <hello></hello>
-        {{/router}}
       </div>
     </Resize>
 </template>
 
 <script>
-{{#unless router}}
-import Hello from './components/Hello';
-{{/unless}}
+
 
 import Resize from '@/components/common/Resize';
 import Menu from '@/components/common/Menu';
@@ -28,9 +22,7 @@ export default {
   components: {
     Logo,
     'menu-app':Menu,
-    Resize{{#unless router}},
-    Hello
-{{/unless}}
+    Resize
   }
 };
 </script>

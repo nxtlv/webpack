@@ -9,14 +9,6 @@ module.exports = {
     }
   },
   "prompts": {
-    "router": {
-      "type": "confirm",
-      "message": "Install vue-router?"
-    },
-    "vuex": {
-      "type": "confirm",
-      "message": "Install vuex?"
-    }
   },
   "filters": {
     ".eslintrc.js": "lint",
